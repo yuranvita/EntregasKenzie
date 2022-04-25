@@ -1,10 +1,8 @@
-function positions(firstPlace, secondPlace, lastPlace) {
-  let colocation = [firstPlace, secondPlace, lastPlace];
-
+function positions(colocation) {
   for (let i in colocation) {
     let aux;
 
-    if (colocation[i] === "Daniel" && Number(i) > 0) {
+    if (colocation[i] === "Daniel" && Number(i) > 1) {
       //prettier-ignore
       aux = colocation[Number(i)-1];
       //prettier-ignore
@@ -12,7 +10,7 @@ function positions(firstPlace, secondPlace, lastPlace) {
       colocation[i] = aux;
 
       console.log(
-        `\n Bônus aplicado ao jogador ${
+        `\n Bônus aplicado ao jogador 😎 ${
           colocation[Number(i) - 1]
         } subiu uma posição \n`
       );
@@ -21,9 +19,24 @@ function positions(firstPlace, secondPlace, lastPlace) {
 
   for (let i in colocation) {
     //prettier-ignore
-    console.log(`${Number(i)+1}ª Colocado ${colocation[i]}`);
+    console.log(`🚀 ${Number(i)+1}ª Colocado ${colocation[i]}`);
   }
   return colocation;
 }
 
-positions("Daniel", "vita", "Yuran");
+let colocation = [
+  "vita",
+  "Yuran",
+  "Nauto",
+  "Monza",
+  "Sedan",
+  "Daniel",
+  "Chevete",
+  "Corsa 2 Portas",
+  "Celta Preto Turbinado",
+  "Saveiro Rebaixada",
+  "Vasco Segunda Divisão",
+  "Palmeiras Não tem Mudial",
+];
+
+positions(colocation);
